@@ -1,15 +1,16 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png">
-  <HelloWorld msg="This is what happens"/>
+<h1>Youtube Browser</h1>
+  <SearchBar/>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import SearchBar from './components/SearchBar.vue'
+
 
 export default {
   name: 'App',
   components: {
-    HelloWorld
+    SearchBar
   }
 }
 </script>
