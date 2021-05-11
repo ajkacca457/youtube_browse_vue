@@ -7,8 +7,8 @@
 <script>
 import axios from "axios";
 import SearchBar from './components/SearchBar.vue';
-import VideoList from './components/VideoList.vue'
-const API_KEY="AIzaSyCvagXSv0a2TuVKyPF8JE_wr8naYowHsoA";
+import VideoList from './components/VideoList.vue';
+import {API_KEY}from "./private.js";
 
 
 export default {
