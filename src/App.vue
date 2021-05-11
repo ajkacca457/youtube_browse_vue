@@ -21,14 +21,14 @@ export default {
   data(){
 
     return {
-      list: []
+      list: ["hello"]
     }
 
   },
 
   methods: {
     searchVideo(input) {
-      console.log(input);
+      console.log(input,this.list);
       axios.get("https://www.googleapis.com/youtube/v3/search", {
         params:{
           key:API_KEY,

@@ -1,10 +1,8 @@
 <template>
 
 <ul>
-    <h3>Video List</h3>
-    <VideoItem/>
+    <VideoItem />
 </ul>
-
 
 </template>
 
