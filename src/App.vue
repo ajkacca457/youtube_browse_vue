@@ -1,17 +1,42 @@
 <template>
 <h1>Youtube Browser</h1>
-  <SearchBar/>
+  <SearchBar @inputChange="searchVideo"/>
+  <VideoList/>
 </template>
 
 <script>
-import SearchBar from './components/SearchBar.vue'
+import axios from "axios";
+import SearchBar from './components/SearchBar.vue';
+import VideoList from './components/VideoList.vue'
+const API_KEY="AIzaSyCvagXSv0a2TuVKyPF8JE_wr8naYowHsoA";
 
 
 export default {
   name: 'App',
   components: {
-    SearchBar
+    SearchBar,
+    VideoList
+  },
+
+  methods: {
+    searchVideo(input) {
+      console.log(input);
+      axios.get("https://www.googleapis.com/youtube/v3/search", {
+        params:{
+          key:API_KEY,
+          type:"video",
+          part: "snippet",
+          q: input 
+        }
+
+      }).then(response=> console.log(response.data));
+
+    },
+
   }
+
+
+
 }
 </script>
 
