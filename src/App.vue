@@ -1,7 +1,7 @@
 <template>
 <h1>Youtube Browser</h1>
   <SearchBar @inputChange="searchVideo"/>
-  <VideoList/>
+  <VideoList :videos="list"/>
 </template>
 
 <script>
@@ -18,6 +18,14 @@ export default {
     VideoList
   },
 
+  data(){
+
+    return {
+      list: []
+    }
+
+  },
+
   methods: {
     searchVideo(input) {
       console.log(input);
@@ -29,7 +37,10 @@ export default {
           q: input 
         }
 
-      }).then(response=> console.log(response.data));
+      }).then((response)=> {
+          this.list=response.data.items;
+          console.log(this.list);
+      });
 
     },
 

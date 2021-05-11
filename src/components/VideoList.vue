@@ -3,7 +3,6 @@
 <ul>
     <h3>Video List</h3>
     <VideoItem/>
-
 </ul>
 
 
@@ -18,6 +17,9 @@ export default{
     name: "VideoList",
     components:{
         VideoItem
+    },
+    props:{
+        videos:Array
     }
 }
 
