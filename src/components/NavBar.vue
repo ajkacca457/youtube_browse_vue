@@ -1,6 +1,6 @@
 <template>
     
-<div class="navbar">
+<div class="dbar">
     <img src="https://img.icons8.com/bubbles/80/000000/youtube-squared.png"/>
     <br>
     <img src="https://see.fontimg.com/api/renderfont4/dE0g/eyJyIjoiZnMiLCJoIjozNiwidyI6MTAwMCwiZnMiOjM2LCJmZ2MiOiIjMDAwMDAwIiwiYmdjIjoiIzcyREMwQSIsInQiOjF9/WW91dHViZSBCcm93c2Vy/beautiful-people-personal-use.png" alt="">
@@ -21,7 +21,7 @@ export default{
 
 <style scoped>
 
-.navbar {
+.dbar {
     text-align: center;
     background-color: aliceblue;
 }

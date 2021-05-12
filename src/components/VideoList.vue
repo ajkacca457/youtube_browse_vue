@@ -1,7 +1,7 @@
 <template>
 
 <ul>
-    <VideoItem />
+    <VideoItem v-for="video in videos" :video="video" v-bind:key="video.id"/>
 </ul>
 
 </template>

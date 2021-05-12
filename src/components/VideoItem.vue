@@ -1,6 +1,6 @@
 <template>
 
-<h5>This is a list item</h5>
+<h5>{{video.snippet.title}}</h5>
 
 </template>
 
@@ -8,7 +8,10 @@
 
 export default{
 
-    name:"VideoItem"
+    name:"VideoItem",
+    props:{
+        video:Object
+    }
 }
 
 

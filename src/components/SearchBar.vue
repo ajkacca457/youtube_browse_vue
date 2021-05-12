@@ -1,6 +1,6 @@
 <template>
 <div class="searchdiv">
-<input type="text" placeholder="write the name of your video" v-model="searchValue" class="inputitem"/>
+<input type="text" placeholder="Write the name of your video  ...." v-model="searchValue" class="inputitem"/>
 <button @click="inputfield" class="btn">Search</button>
 
 </div>
