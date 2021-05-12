@@ -1,13 +1,16 @@
 <template>
-<h1>Youtube Browser</h1>
+<div class="app">
+  <Navbar/>
   <SearchBar @inputChange="searchVideo"/>
   <VideoList :videos="list"/>
+  </div>
 </template>
 
 <script>
 import axios from "axios";
 import SearchBar from './components/SearchBar.vue';
 import VideoList from './components/VideoList.vue';
+import Navbar from './components/NavBar.vue';
 import {API_KEY}from "./private.js";
 
 
@@ -15,7 +18,8 @@ export default {
   name: 'App',
   components: {
     SearchBar,
-    VideoList
+    VideoList,
+    Navbar
   },
 
   data(){
@@ -52,12 +56,10 @@ export default {
 </script>
 
 <style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
+
+  .app {
+    width: 80%;
+    margin: 2% auto;
+  }
+
 </style>
