@@ -1,6 +1,7 @@
 <template>
 <div>
-<input type="text" placeholder="search your video" @input="inputfield" class="inputitem"/>
+<input type="text" placeholder="search your video" v-model="searchValue" class="inputitem"/>
+<button @click="inputfield">Search</button>
 
 </div>
 </template>
@@ -11,10 +12,19 @@
 export default {
 name: "SearchBar",
 
+data(){
+
+    return{
+        searchValue: ""
+    }
+
+},
+
 methods:{
 
-inputfield(e){
-    this.$emit("inputChange",e.target.value);
+inputfield(){
+    this.$emit("inputChange",this.searchValue);
+    this.searchValue="";
 }   
 
 }
