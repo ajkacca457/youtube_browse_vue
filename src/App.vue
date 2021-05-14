@@ -1,9 +1,11 @@
 <template>
-  <div class="app">
+  <div class="app container justify-content-center">
     <Navbar />
     <SearchBar @inputChange="searchVideo" />
+    <div class="row">
     <VideoDisplay :video="video"/>
     <VideoList :videos="list"  @videoselect="videodisplay"/>
+    </div>
   </div>
 </template>
 
