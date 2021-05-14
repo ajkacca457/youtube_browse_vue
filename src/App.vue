@@ -2,7 +2,8 @@
   <div class="app">
     <Navbar />
     <SearchBar @inputChange="searchVideo" />
-    <VideoList :videos="list" />
+    <VideoDisplay :video="video"/>
+    <VideoList :videos="list"  @videoselect="videodisplay"/>
   </div>
 </template>
 
@@ -12,6 +13,7 @@ import SearchBar from "./components/SearchBar.vue";
 import VideoList from "./components/VideoList.vue";
 import Navbar from "./components/NavBar.vue";
 import { API_KEY } from "./private.js";
+import VideoDisplay from "./components/VideoDisplay.vue"
 
 export default {
   name: "App",
@@ -19,11 +21,13 @@ export default {
     SearchBar,
     VideoList,
     Navbar,
+    VideoDisplay
   },
 
   data() {
     return {
       list: [],
+      video:""
     };
   },
 
@@ -44,6 +48,11 @@ export default {
           console.log(this.list);
         });
     },
+
+    videodisplay(video){
+     this.video=video;
+    }
+
   },
 };
 </script>

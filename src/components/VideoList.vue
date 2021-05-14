@@ -1,7 +1,11 @@
 <template>
 
 <ul class="list-group">
-    <VideoItem v-for="video in videos" :video="video" v-bind:key="video.id"/>
+    <VideoItem 
+    v-for="video in videos" 
+    :video="video" 
+    v-bind:key="video.id"
+    @videoselect="selectvideo"/>
 </ul>
 
 </template>
@@ -18,6 +22,11 @@ export default{
     },
     props:{
         videos:Array
+    },
+    methods:{
+        selectvideo(video){
+            this.$emit("videoselect",video)
+        }
     }
 }
 

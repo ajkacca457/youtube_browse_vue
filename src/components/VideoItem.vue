@@ -1,9 +1,9 @@
 <template>
 
-<li class="list-group-item my-2 border-1 rounded item media">
+<li class="list-group-item my-2 border-1 rounded item media" @click="selectvideo">
   <img :src="thumbNail" alt="Generic placeholder image" >
   <div class="media-body">
-    {{video.snippet.title}}
+    <h6 class="text-secondary">{{video.snippet.title}}</h6>
     </div>
 </li>
 
@@ -17,6 +17,12 @@ export default{
     props:{
         video:Object
     },
+    methods:{
+        selectvideo(){
+            this.$emit("videoselect",this.video)
+        }
+    },
+
     computed:{
       thumbNail(){
           return this.video.snippet.thumbnails.default.url

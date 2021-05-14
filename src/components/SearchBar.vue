@@ -46,7 +46,7 @@ inputfield(){
 
 .inputitem {
     width: 100%;
-    height: 30px;
+    height: 35px;
     border-radius: 5px;
     border:1px solid gainsboro;
     text-align: center;
